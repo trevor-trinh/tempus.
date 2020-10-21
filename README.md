@@ -24,7 +24,7 @@ Note: You can remove parts of script.js, that fetch to the backend, to have a se
 ```bash
 git clone https://github.com/trevor-trinh/tempus..git
 cd tempus.
-``
+```
 
 (OPTIONAL) Use python `venv` to make a virtual environment:
 
