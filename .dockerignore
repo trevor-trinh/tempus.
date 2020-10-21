@@ -1,0 +1,5 @@
+**
+!/static/**
+!/templates/**
+!/app.py
+!/requirements.txt

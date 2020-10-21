@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#logo {
+  position: absolute;
+  width: 115px;
+  height: 27px;
+  left: 17px;
+  top: 13px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #ffffff;
+}
+
+#clock {
+  position: absolute;
+  width: 113px;
+  height: 70px;
+  left: 34px;
+  top: 76px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 40px;
+
+  text-align: left;
+
+  color: #ffffff;
+}
+
+#top-bar {
+  position: fixed;
+  width: 100%;
+  margin-left: 35%;
+  height: 121px;
+  left: 18px;
+  top: 54px;
+
+  background: #ff9999;
+  border-radius: 30px;
+}
+
+#todo-label {
+  position: absolute;
+  width: 174px;
+  height: 32px;
+  left: 20px;
+  top: 185px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 40px;
+
+  color: #ef7070;
+}
+
+#done-items {
+  top: 40%;
+  left: 150px;
+  width: 10%;
+  padding-left: 0;
+  padding-right: 10px;
+  max-height: 43vh;
+  text-align: left;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+/* Style the input */
+input {
+  position: absolute;
+  width: 250px;
+  height: 40px;
+  left: 14px;
+  top: 223px;
+
+  background: #ffffff;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  border: none;
+  border-radius: 0;
+  padding: 10px;
+  float: left;
+  border-style: solid;
+  border-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-color: white;
+  border-radius: 22px 0 0 22px;
+  outline: none;
+}
+
+/* Style the "Add" button */
+#add-task {
+  position: absolute;
+  width: 45px;
+  height: 40px;
+  top: 223px;
+  left: 255px;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 15px;
+  padding: 10px;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  border-style: solid;
+  border-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-color: white;
+  border-radius: 0 22px 22px 0;
+  outline: none;
+}
+
+#add-task:hover {
+  background-color: #bbb;
+}
+
+/* TO DO LIST */
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 25px 10px 40px;
+  word-wrap: break-word;
+  list-style-type: none;
+  background: #f9f9f9;
+  font-size: 12px;
+  transition: 0.2s;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-color: white;
+  border-radius: 22px;
+  margin-top: 10px;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.25s linear;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut 0.25s linear;
+}
+
+ul li.done {
+  background: #888;
+  transition: 0.25s;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.done::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 12px;
+  width: 5.6px;
+  transition: 0.25s;
+}
+
+li {
+  max-width: 285px;
+}
+
+/* Style the close button */
+.delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 16px 10px 16px;
+}
+
+.delete:hover {
+  background: rgba(204, 204, 204, 0.5);
+  border-radius: 30px 30px 30px 30px;
+}
+
+#todo-list {
+  position: absolute;
+  top: 265px;
+  left: 14px;
+  width: 305px;
+  height: 80%;
+  min-height: 100vh;
+}
+
+#todo-items {
+  top: 40%;
+  left: 150px;
+  width: 10%;
+  padding-left: 0;
+  padding-right: 10px;
+  max-height: 43vh;
+  text-align: left;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#todo-list-scrollbar {
+  height: 35%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#show-finished {
+  position: absolute;
+  top: 543px;
+  left: 6px;
+  height: 27px;
+  width: 27px;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  border-color: transparent;
+  background-color: #ff9999;
+}
+
+/* Background color button*/
+#color-theme-button {
+  position: absolute;
+  background-color: #ff9999;
+  top: 543px;
+  left: 39px;
+  height: 27px;
+  width: 27px;
+  border-radius: 30px;
+  border-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.color-themes {
+  height: 18.11px;
+  width: 18.11px;
+  border-radius: 30px;
+  border-color: white;
+  border-width: 0px;
+  outline: none;
+  cursor: pointer;
+}
+
+#color-bar {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0, 0);
+}
+
+#color-bar-content {
+  position: absolute;
+  background: rgba(102, 102, 102, 0.5);
+  border: 1px solid #888;
+  border-radius: 50px;
+  height: 26px;
+  left: 72px;
+  top: 543px;
+  padding: 3px;
+}
+
+#cFF9999 {
+  background-color: #ff9999;
+}
+
+#cFFCF87 {
+  background-color: #ffcf87;
+}
+
+#c99DA83 {
+  background-color: #99da83;
+}
+
+#c93D7E6 {
+  background-color: #93d7e6;
+}
+
+#cC8A8F2 {
+  background-color: #c8a8f2;
+}
+
+#c505050 {
+  background-color: #505050;
+}
+
+#content {
+  position: relative;
+  width: 340px;
+  height: 580px;
+  margin-left: 35%;
+}
+
+body {
+  background-color: pink;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

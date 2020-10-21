@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}" />
+    <title>trevzCTF | tempus.</title>
+    <meta name="description" content="tempus. chall!" />
+    <meta name="author" content="Trevor Trinh" />
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='favicon.ico')}}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js" integrity="sha512-AcZyhRP/tbAEsXCCGlziPun5iFvcSUpEz2jKkx0blkYKbxU81F+iq8FURwPn1sYFeksJ+sDDrI5XujsqSobWdQ==" crossorigin="anonymous"></script>
+
+  </head>
+
+  <body>
+
+    {% block body %}{% endblock body %}
+    
+  </body>    
+  <script type=text/javascript src="{{url_for('static', filename='script.js')}}"></script>
+
+</html>
